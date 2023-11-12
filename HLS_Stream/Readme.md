@@ -8,3 +8,8 @@ Before you can execute the project, you need to be mindful of two things
 
 ## Streaming through S3
 1. [Here](https://hlsbook.net/how-to-serve-hls-video-from-an-s3-bucket/) is what you'll need to follow.
+
+
+## How to create chunks/segments?
+
+`ffmpeg -i filename.mp4 -codec: copy -start_number 0 -hls_time 10 -hls_list_size 0 -f hls filename.m3u8`
